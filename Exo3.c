@@ -1,33 +1,68 @@
 #include<stdio.h>
-int main()
+int main ()
 {
-    int i,position,n,data[10];
-    printf("Enter the size of the array n: \n");
+    int n,i,j;
+    printf("Enter the size of your matrices:  ");
     scanf("%d",&n);
+    int a[n][n],b[n][n];
+    printf("\n");
+    printf("Enter the first matrix a\n");
     for(i=0;i<n;i++)
     {
-        printf("Enter the elements of the array data[%d]: ",i);
-        scanf("%d",&data[i]);
-    }
-    printf("\nEnter the position of the element that you want to delete: ");
-    scanf("%d",&position);
-    if(position>n || position<0)
-    {
-        printf("Error");
-    }
-    else
-    {
-        for(i=position-1;i<n;i++)
+        for(j=0;j<n;j++)
         {
-            data[i]=data[i+1];
+            printf("a[%d][%d]: ",i,j);
+            scanf("%d",&a[i][j]);
         }
-        n--;
-        printf("The array after deleting an element:\n");
-        for(i=0;i<n;i++)
+    }
+    printf("\n");
+    printf("Enter the second matrix a\n");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
         {
-            printf("%d\n",data[i]);
+            printf("b[%d][%d]: ",i,j);
+            scanf("%d",&b[i][j]);
         }
+    }
+    printf("\n");
+    printf("The first matrix a is \n");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            printf("a[%d][%d] = %d ",i,j,a[i][j]);
+            printf("\n");
+        }
+    }
+    printf("\n");
+    printf("The second matrix b is \n");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            printf("a[%d][%d] = %d ",i,j,b[i][j]);
+            printf("\n");
+        }
+    }
 
+    int c[n][n];
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            c[i][j]=a[i][j]+b[i][j];
+        }
+    }
+    printf("\n");
+    printf("The sum of two matrix is \n");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            printf("c[%d][%d] = %d ",i,j,c[i][j]);
+            printf("\n");
+        }
     }
 
 return 0;
